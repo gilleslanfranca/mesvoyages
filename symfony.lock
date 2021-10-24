@@ -1,4 +1,7 @@
 {
+    "behat/transliterator": {
+        "version": "v1.3.0"
+    },
     "composer/package-versions-deprecated": {
         "version": "1.11.99.4"
     },
@@ -23,6 +26,9 @@
     "doctrine/common": {
         "version": "2.13.3"
     },
+    "doctrine/data-fixtures": {
+        "version": "1.5.1"
+    },
     "doctrine/dbal": {
         "version": "2.13.4"
     },
@@ -43,6 +49,18 @@
             "./config/packages/prod/doctrine.yaml",
             "./src/Repository/.gitignore",
             "./src/Entity/.gitignore"
+        ]
+    },
+    "doctrine/doctrine-fixtures-bundle": {
+        "version": "3.4",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "3.0",
+            "ref": "e5b542d4ef47d8a003c91beb35650c76907f7e53"
+        },
+        "files": [
+            "./src/DataFixtures/AppFixtures.php"
         ]
     },
     "doctrine/doctrine-migrations-bundle": {
@@ -91,6 +109,12 @@
     "fig/link-util": {
         "version": "1.1.2"
     },
+    "fzaninotto/faker": {
+        "version": "v1.9.2"
+    },
+    "jms/metadata": {
+        "version": "2.5.1"
+    },
     "monolog/monolog": {
         "version": "1.26.1"
     },
@@ -113,7 +137,7 @@
         "version": "2.2.0"
     },
     "phpdocumentor/reflection-docblock": {
-        "version": "5.3.0"
+        "version": "5.2.2"
     },
     "phpdocumentor/type-resolver": {
         "version": "1.5.1"
@@ -223,7 +247,7 @@
         ]
     },
     "swiftmailer/swiftmailer": {
-        "version": "v6.3.0"
+        "version": "v6.2.7"
     },
     "symfony/asset": {
         "version": "v4.3.11"
@@ -353,6 +377,18 @@
     "symfony/intl": {
         "version": "v4.3.11"
     },
+    "symfony/mailer": {
+        "version": "4.3",
+        "recipe": {
+            "repo": "github.com/symfony/recipes",
+            "branch": "master",
+            "version": "4.3",
+            "ref": "bbfc7e27257d3a3f12a6fb0a42540a42d9623a37"
+        },
+        "files": [
+            "./config/packages/mailer.yaml"
+        ]
+    },
     "symfony/maker-bundle": {
         "version": "1.34",
         "recipe": {
@@ -387,12 +423,12 @@
         "version": "v4.3.11"
     },
     "symfony/phpunit-bridge": {
-        "version": "5.3",
+        "version": "4.3",
         "recipe": {
             "repo": "github.com/symfony/recipes",
             "branch": "master",
-            "version": "5.3",
-            "ref": "97cb3dc7b0f39c7cfc4b7553504c9d7b7795de96"
+            "version": "4.3",
+            "ref": "0e1b186400de9d4ab83363138b4eb0072c99b2ab"
         },
         "files": [
             "./.env.test",
@@ -492,6 +528,9 @@
             "./config/packages/dev/swiftmailer.yaml"
         ]
     },
+    "symfony/templating": {
+        "version": "v4.3.11"
+    },
     "symfony/translation": {
         "version": "4.3",
         "recipe": {
@@ -579,6 +618,18 @@
     },
     "twig/twig": {
         "version": "v2.14.7"
+    },
+    "vich/uploader-bundle": {
+        "version": "1.10",
+        "recipe": {
+            "repo": "github.com/symfony/recipes-contrib",
+            "branch": "master",
+            "version": "1.7",
+            "ref": "c4f5755b37fb65b9c6a3cbdae91205c15a137ed4"
+        },
+        "files": [
+            "./config/packages/vich_uploader.yaml"
+        ]
     },
     "webmozart/assert": {
         "version": "1.10.0"
