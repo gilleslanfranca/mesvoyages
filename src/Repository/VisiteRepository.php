@@ -5,7 +5,6 @@ namespace App\Repository;
 use App\Entity\Visite;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
 use Doctrine\Persistence\ManagerRegistry;
-use Symfony\Component\HttpFoundation\Response;
 
 /**
  * @method Visite|null find($id, $lockMode = null, $lockVersion = null)
@@ -78,4 +77,17 @@ class VisiteRepository extends ServiceEntityRepository
                    ->getResult();
        }
    }
+
+    /**
+     * Retourne les n visites les plus récentes
+     * @param type $nb
+     * @return Visite[]
+     */
+    public function findAllLasted($nb) : array {
+        return $this->createQueryBuilder('v') // alias de la table
+           ->orderBy('v.datecreation', 'DESC')
+           ->setMaxResults($nb)     
+           ->getQuery()
+           ->getResult();
+    }
 }

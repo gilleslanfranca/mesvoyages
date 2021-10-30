@@ -9,7 +9,7 @@
             "request": "launch",
             "reAttach": true,
             "name": "Launch mesvoyages",
-            "url": "http://localhost/public/index.php",
+            "url": "http://localhost/mesvoyages/public/index.php",
             "webRoot": "${workspaceFolder}"
         }
         
